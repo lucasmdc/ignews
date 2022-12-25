@@ -51,6 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
   })
 
   const posts = response.results.map(post => {
+    console.log(post.last_publication_date)
     return {
       slug: post.uid,
       title: PrismicHelpers.asText(post.data.title),
