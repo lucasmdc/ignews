@@ -6,8 +6,6 @@ import { signIn, signOut, useSession } from 'next-auth/react'
 export function SignInButton() {
   const { data: sessionData, status: sessionStatus } = useSession()
 
-  console.log(sessionData)
-
   return sessionStatus === "authenticated" ? (
     <button
       className={styles.signInButton}
